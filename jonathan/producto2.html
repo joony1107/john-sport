@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> John Sport</title>
+    <link rel="stylesheet" href="styles2.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        header {
+            background-color: #222;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header img {
+            width: 50px;
+            vertical-align: middle;
+        }
+        header h1 {
+            display: inline;
+            margin-left: 10px;
+        }
+        header nav {
+            margin-top: 15px;
+        }
+        header nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        header nav a:hover {
+            color: #00bcd4;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 40px 10%;
+        }
+        aside {
+            flex: 1 1 250px;
+            background-color: #e0e0e0;
+            padding: 20px;
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+        aside h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        aside ul {
+            list-style-type: none;
+        }
+        aside li {
+            margin-bottom: 10px;
+        }
+        aside li ul {
+            padding-left: 20px;
+        }
+        .product-section {
+            flex: 3 1 700px;
+        }
+        .product-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .product-row {
+            display: flex;
+            justify-content: space-between; 
+            gap: 20px; 
+            margin-bottom: 40px;
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            flex: 1 1 30%;
+        }
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .product-card h3 {
+            margin-top: 15px;
+            font-size: 1.3rem;
+        }
+        .product-card p {
+            font-size: 1.1rem;
+            margin: 10px 0;
+        }
+        .product-card .btn {
+            background-color: #00bcd4;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .product-card .btn:hover {
+            background-color: #0097a7;
+        }
+        table {
+            width: 100%;
+            margin-top: 40px;
+            border-collapse: collapse;
+            text-align: center;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #222;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            main {
+                padding: 20px;
+            }
+            header nav {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            header nav a {
+                margin: 5px 10px;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr); 
+            }
+
+            .product-row {
+                flex-direction: column; 
+            }
+
+            .product-card {
+                flex: 1 1 100%; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="./imagenes/logo2.png" alt="" srcset="" width="150">
+        <h1>John Sport</h1>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Productos</a>
+            <a href="#">Sobre Nosotros</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <h3>Categorías</h3>
+            <ul>
+                <li>Calzado:
+                    <ul>
+                        <li>Zapatillas para Correr</li>
+                        <li>Zapatillas de Entrenamiento</li>
+                        <li>Calzado Casual</li>
+                    </ul>
+                </li>
+                <li>Equipo de Fitness
+                    <ul>
+                        <li>Equipo de Ejercicio:</li>
+                        <li>Yoga y Pilates</li>
+                    </ul>
+                </li>
+                <li>Deportes al aire libre:
+                    <ul>
+                        <li>Senderismo</li>
+                        <li>Deportes Acuaticos y Actividades</li>
+                        <Li>Equipo de Camping</Li>
+                        <li>Accesorios para Ciclismo</li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+
+        <section class="product-section">
+            <h2>Nuestros Productos</h2>
+            <div class="product-row">
+                <div class="product-card">
+                    <img src="./imagenes/zapatillas2.jpg" alt="">
+                    <h3>Zapatillas</h3>
+                    <p>$89.99</p>
+                    <a href="#" class="btn">Añadir al carrito</a>
+                </div>
+                <div class="product-card">
+                    <img src="./imagenes/esterilla de yoga2.jpg" alt="">
+                    <h3>Esterilla de Yoga</h3>
+                    <p>$29.99</p>
+                    <a href="#" class="btn">Añadir al carrito</a>
+                </div>
+                <div class="product-card">
+                    <img src="./imagenes/juego de pesas2.jpg" alt="">
+                    <h3>juego de Pesas</h3>
+                    <p>$59.99</p>
+                    <a href="#" class="btn">Añadir al carrito</a>
+                </div>
+            </div>
+            <div class="product-row">
+                <div class="product-card">
+                    <img src="./imagenes/nike2.jpg" alt="">
+                    <h3>Nike</h3>
+                    <p>$79.9</p>
+                    <a href="#" class="btn">Añadir al carrito</a>
+                </div>
+                <div class="product-card">
+                    <img src="./imagenes/remera2.jpg" alt="">
+                    <h3>Remera Deportiba</h3>
+                    <p>$29.90</p>
+                    <a href="#" class="btn">Añadir al carrito</a>
+                </div>
+                <div class="product-card">
+                    <img src="./imagenes/casco2.webp" alt="">
+                    <h3>Cascos</h3>
+                    <p>$19.90</p>
+                    <a href="#" class="btn">Añadir al carrito</a>
+                </div>
+            </div>
+
+            <h2>Beneficios de nuestros productos</h2>
+            <table>
+                <tr>
+                    <th>Características</th>
+                    <th>Beneficio 1</th>
+                    <th>Beneficio 2</th>
+                    <th>Beneficio 3</th>
+                </tr>
+                <tr>
+                    <td>Calidad</td>
+                    <td>Alta durabilidad</td>
+                    <td>Materiales Premium</td>
+                    <td>Larga duración</td>
+                </tr>
+                <tr>
+                    <td>Precio</td>
+                    <td>Precios competitivos</td>
+                    <td>Excelente relación calidad-precio</td>
+                    <td>Asequibles</td>
+                </tr>
+                <tr>
+                    <td>Diseño</td>
+                    <td>Moderno</td>
+                    <td>Ergonómico</td>
+                    <td>Estilo único</td>
+                </tr>
+                <tr>
+                    <td>Garantía</td>
+                    <td>Garantía de 2 años</td>
+                    <td>Cobertura extendida</td>
+                    <td>Soporte continuo</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 John Sport. Todos los derechos reservados.
+    </footer>
+
+</body>
+</html>
